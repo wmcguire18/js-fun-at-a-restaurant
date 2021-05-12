@@ -33,12 +33,13 @@ var isFavorite = false;
 // variable should be true, otherwise it should be false. You MUST use a
 // comparison operator.
 
-var shouldOrderMore =
+var shouldOrderMore;
+
 if (inStock < 20){
   shouldOrderMore = true;
 } else {
   shouldOrderMore = false;
-}
+};
 
 //------------------------- Conditionals -------------------------//
 
@@ -47,7 +48,13 @@ if (inStock < 20){
 // Express the following in code: If the variable "stockCount" is greater or equal to 1, log
 // the statement 'I'm going to eat some [food]!', otherwise, log the statement
 // 'We need to get some more [food].'
+var stockCount
 
+if (stockCount >= 1){
+  console.log(`I'm going to eat some ${food}!`)
+} else {
+  console.log(`We need to get some more ${food}.`)
+};
 
 
 // Express the following in code: If the variable "isFavorite" is true,
@@ -55,7 +62,11 @@ if (inStock < 20){
 // statement 'I recently ate [food]'. In either case, the value stored in
 // the "food" variable should be included in the logged statement.
 
-
+if (isFavorite === true){
+  console.log(`My favorite food is ${food}!`)
+} else {
+  console.log(`I recently ate ${food}.`)
+};
 
 //------------------------- Arrays -------------------------//
 
