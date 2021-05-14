@@ -18,19 +18,6 @@ function addMenuItem(createdRestaurant, item){
 }
 }
 
-
-//   if (type) {
-//     for (var i = 0; i < createdRestaurant.menus[type].length; i++) {
-//       if (item == createdRestaurant.menus[type][i].name) {
-//         createdRestaurant.menus[type].splice(item, 1)
-//       }
-//     }
-//     return `No one is eating our ${item} - it has been removed from the ${type} menu!`
-//   } else if (!createdRestaurant.menus[type][i].includes(item)) {
-//     return `Sorry, we don't sell ${item}, try adding a new recipe!`
-//   }
-// }
-
 function removeMenuItem(createdRestaurant, item, type) {
 console.log(createdRestaurant.menus[type])
   if (createdRestaurant.menus[type] !== undefined){
