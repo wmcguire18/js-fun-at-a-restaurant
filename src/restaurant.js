@@ -18,17 +18,31 @@ function addMenuItem(createdRestaurant, item){
 }
 }
 
-function removeMenuItem(createdRestaurant, item, type){
-    if (type === "lunch"){
-    createdRestaurant.menus.lunch.pop(item)
-  } else if (type === "dinner"){
-    createdRestaurant.menus.dinner.pop(item)
-  } else if (type === "breakfast"){
-    createdRestaurant.menus.breakfast.pop(item)
-  }
-  return `No one is eating our ${item} - it has been removed from the ${type} menu!`
-}
 
+//   if (type) {
+//     for (var i = 0; i < createdRestaurant.menus[type].length; i++) {
+//       if (item == createdRestaurant.menus[type][i].name) {
+//         createdRestaurant.menus[type].splice(item, 1)
+//       }
+//     }
+//     return `No one is eating our ${item} - it has been removed from the ${type} menu!`
+//   } else if (!createdRestaurant.menus[type][i].includes(item)) {
+//     return `Sorry, we don't sell ${item}, try adding a new recipe!`
+//   }
+// }
+
+function removeMenuItem(createdRestaurant, item, type) {
+console.log(createdRestaurant.menus[type])
+  if (createdRestaurant.menus[type] !== undefined){
+    for (var i = 0; i < createdRestaurant.menus[type].length; i++){
+      createdRestaurant.menus[type].splice(i, 1)
+      return `No one is eating our ${item} - it has been removed from the ${type} menu!`
+    }
+  }
+  if (!createdRestaurant.menus[type].includes(item)){
+      return `Sorry, we don't sell ${item}, try adding a new recipe!`
+    }
+  }
 
 module.exports = {
   createRestaurant,
